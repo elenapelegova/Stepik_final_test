@@ -25,12 +25,3 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     basket_page = BasketPage(browser, browser.current_url)
     basket_page.there_are_no_products_in_the_basket()
     basket_page.there_is_text_basket_is_empty()
-
-def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
-    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-age-of-the-pussyfoot_89/"
-    page = ProductPage(browser, link)
-    page.open()
-    page.go_to_basket()
-    basket_page = BasketPage(browser, browser.current_url)
-    basket_page.there_are_no_products_in_the_basket()
-    basket_page.there_is_text_basket_is_empty()
